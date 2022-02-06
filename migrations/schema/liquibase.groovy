@@ -39,7 +39,7 @@ def connectionOpts = [
 if (credentials.useSSL) {
     connectionOpts.add(
         "--url=\"jdbc:postgresql://$credentials.host:$credentials.port/$credentials.name?ssl=true&" +
-            "sslfactory=org.postgresql.ssl.NonValidatingFactory\""
+            "sslfactory=org.postgresql.ssl.NonValidatingFactory&\""
         // Add a root cert to ensure that there's no MitM
         // "sslfactory=org.postgresql.ssl.SingleCertValidatingFactory&sslfactoryarg=file:$credentials.rootcert\""
     )

@@ -17,7 +17,7 @@ def credentials = [
     'host'    : env['PGHOST'] ?: 'localhost',
     'port'    : env['PGPORT'] ?: '5432',
     'rootcert': env['PGSSLROOTCERT'] ?: '~/.postgresql/server.crt',
-    'useSSL'  : false
+    'useSSL'  : true
 ]
 
 // Map of changelog properties

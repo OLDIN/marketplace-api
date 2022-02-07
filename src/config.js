@@ -47,6 +47,6 @@ export default {
     password: process.env.PGPASSWORD || '',
     host: process.env.PGHOST || 'localhost',
     port: parseInt(process.env.PGPORT, 10) || 5432,
-    ssl: process.env.PGSSL === 'true',
+    ssl: { rejectUnauthorized: false },
   },
 };

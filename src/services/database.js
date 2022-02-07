@@ -20,6 +20,7 @@ export async function connect() {
     connected = true;
     return connection;
   } catch (error) {
+    console.log('database error = ', error);
     connected = false;
     throw new Error(`Database connection failure\n${error}`);
   }

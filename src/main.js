@@ -17,6 +17,9 @@ const app = fastify({
     secret: config.app.secret1,
   })
   .register(multipart)
+  .register(require('fastify-cors'), {
+    origin: true,
+  })
   .register(fastifyOAS, swagger)
   .register(modules);
 

@@ -46,7 +46,7 @@ export default {
     database: process.env.PGDATABASE || 'apiko_courses',
     password: process.env.PGPASSWORD || '',
     host: process.env.PGHOST || 'localhost',
-    port: process.env.PGPORT || 5432,
+    port: parseInt(process.env.PGPORT, 10) || 5432,
     ssl: process.env.PGSSL === 'true',
   },
 };

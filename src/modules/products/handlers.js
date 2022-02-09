@@ -167,14 +167,14 @@ export async function searchProducts(req, res) {
     keywords, location, priceFrom, priceTo, limit, offset,
   } = req.query;
 
-  if (!keywords && !location) {
-    res.status(400).send({
-      // prettier-ignore
-      error: 'required at least one of the properties "keywords" or "location"',
-    });
+  // if (!keywords && !location) {
+  //   res.status(400).send({
+  //     // prettier-ignore
+  //     error: 'required at least one of the properties "keywords" or "location"',
+  //   });
 
-    return;
-  }
+  //   return;
+  // }
 
   const products = await db.searchProducts({
     userId,

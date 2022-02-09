@@ -27,7 +27,5 @@ export async function uploadImage(req, res) {
       res.status(422).send({ error: 'upload failed' });
       return;
     }
-
-    console.log('upload completed');
   }
 }

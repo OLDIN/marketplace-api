@@ -5,7 +5,6 @@ import { checkType } from '../utils';
 
 let connected = false;
 
-console.log('db config = ', config.db);
 
 export const db = new Pool(config.db);
 
@@ -16,11 +15,9 @@ export async function connect() {
 
   try {
     const connection = await db.connect();
-    console.log('Connected to database');
     connected = true;
     return connection;
   } catch (error) {
-    console.log('database error = ', error);
     connected = false;
     throw new Error(`Database connection failure\n${error}`);
   }

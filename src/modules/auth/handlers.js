@@ -21,7 +21,6 @@ export async function register(req, res) {
       userId: newUser.id,
       iat: Date.now(),
     });
-    console.log(token);
 
     res.send({ token, user: newUser });
   } catch (error) {
@@ -59,7 +58,6 @@ export async function login(req, res) {
     userId: user.id,
     iat: Date.now(),
   });
-  console.log(token);
 
   res.send({ token, user });
 }

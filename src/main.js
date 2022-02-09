@@ -36,7 +36,6 @@ const start = async () => {
     await app.listen(config.port, '0.0.0.0');
   } catch (err) {
     app.log.error(err);
-    console.log(err);
     process.exit(1);
   }
 };
